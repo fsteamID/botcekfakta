@@ -1,0 +1,11 @@
+type: 'nodejs:20'
+dependencies:
+    nodejs:
+        sharp: "*"
+hooks:
+    build: |
+        npm run setup-assets
+        npm run build        
+web:
+    commands:
+        start: node index.js
